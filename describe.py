@@ -11,3 +11,5 @@ data = {
 df = pd.DataFrame(data)
 print("Print Employee DataFrame:")
 print(df)
+print(f'shape {df.shape}')  # gave info abut row and columns
+print(f'Columns {df.columns}') # gave info about columns names
