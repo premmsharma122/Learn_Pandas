@@ -13,3 +13,11 @@ print("Print Employee DataFrame:")
 print(df)
 print(f'shape {df.shape}')  # gave info abut row and columns
 print(f'Columns {df.columns}') # gave info about columns names
+#Accessing single column
+name = df["Name"]
+print("Accessing single column 'Name':")
+print(name)
+#Accessing multiple columns
+columns = df[["Name", "Age"]]
+print("Accessing multiple columns 'Name' and 'Age':")   
+print(columns)
