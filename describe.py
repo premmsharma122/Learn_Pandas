@@ -5,7 +5,7 @@ data = {
     "Age" : [20, 21, 22, 23, 24, 25, 26, 27, 28],
     "City" : ["Vrindavan", "Delhi", "Agra", "Mathura", "Gwalior", "Indore", "Bhopal", "Jaipur", "Udaipur"],
     "Country": ["India", "India", "India", "India", "India", "India", "India", "India", "India"],
-    "Salary": [50000, 60000, 70000, 80000, 90000, 100000, 110000, 120000, 130000]
+    "Salary": [1000000, 60000, 70000, 80000, 90000, 100000, 110000, 120000, 130000]
 }
 
 df = pd.DataFrame(data)
@@ -21,3 +21,7 @@ print(name)
 columns = df[["Name", "Age"]]
 print("Accessing multiple columns 'Name' and 'Age':")   
 print(columns)
+# Apply Filter
+print("Filter rows where Salary is greater than 80000 & age > 27:")
+filter = df[(df["Salary"] > 80000) & (df["Age"]>27) ] # Filter rows where Salary is greater than 80000
+print(filter)
