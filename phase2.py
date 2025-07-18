@@ -9,16 +9,27 @@ data  = {
     "Experience": [2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
 df = pd.DataFrame(data)
-print(df)
+# print(df)
 # Insert a colum in Data Frame-> Ist Method
 df["Bounce"] = df["Salary"] *0.1
-print("DataFrame after adding 'Bounce' column:" )
-print(df)
+# print("DataFrame after adding 'Bounce' column:" )
+# print(df)
 # Insert a column in Data Frame -> 2nd Method
 df.insert(2, "Bonus", df["Salary"] * 0.05)
-print("DataFrame after adding 'Bonus' column:")
-print(df)
+# print("DataFrame after adding 'Bonus' column:")
+# print(df)
 
 #Update a column value 
 df.loc[0, "Salary"]  = 1200000
-print("DataFrame agter update salary of the first employee : ",df)  
+# print("DataFrame agter update salary of the first employee : ",df)  
+# delete a column
+df = df.drop(columns=["Experience"])
+# print("DataFrame after deleting 'Experience' column:")
+# print(df)
+# delete a row
+# print("DataFrame before dropping the first row:")
+df = df.drop(index=3, inplace=False)  # Dropping the first row
+# print(df)
+#Find missing values
+print("Checking for missing values in DataFrame:")
+print(df.isnull())  # False means no missing values
